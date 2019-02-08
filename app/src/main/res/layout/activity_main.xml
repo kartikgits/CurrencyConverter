@@ -15,6 +15,7 @@
         android:layout_centerInParent="true">
 
         <EditText
+            android:id="@+id/usd_entry"
             android:layout_width="152dp"
             android:layout_height="wrap_content"
             android:inputType="number"
@@ -25,7 +26,8 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="INR"
-            android:enabled="false"/>
+            android:enabled="false"
+            android:onClick="currencyConvert"/>
     </LinearLayout>
 
     <LinearLayout
@@ -38,6 +40,7 @@
         android:layout_below="@id/mid_layout">
 
         <EditText
+            android:id="@+id/inr_entry"
             android:layout_width="152dp"
             android:layout_height="wrap_content"
             android:inputType="number"
@@ -48,7 +51,8 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="USD"
-            android:enabled="false"/>
+            android:enabled="false"
+            android:onClick="currencyConvert"/>
     </LinearLayout>
 
     <LinearLayout
@@ -64,16 +68,17 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:id="@+id/show_rate_textview"
-            android:text="Rs. 3000"
             android:gravity="center"
             android:textSize="24sp"/>
 
         <Button
+            android:id="@+id/back_button"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:gravity="center"
             android:layout_gravity="center"
-            android:text="Back"/>
+            android:text="Back"
+            android:onClick="backButton"/>
 
     </LinearLayout>
 
@@ -81,6 +86,7 @@
         android:id="@+id/progress_bar"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_below="@id/mid_next_layout"
         android:layout_centerInParent="true"
         android:visibility="invisible" />
 
