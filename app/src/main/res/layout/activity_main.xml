@@ -1,18 +1,51 @@
 <?xml version="1.0" encoding="utf-8"?>
-<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".MainActivity">
 
-    <TextView
-        android:layout_width="wrap_content"
+    <LinearLayout
+        android:id="@+id/mid_layout"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Hello World!"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        android:orientation="horizontal"
+        android:padding="8dp"
+        android:gravity="center"
+        android:layout_centerInParent="true">
 
-</android.support.constraint.ConstraintLayout>
+        <EditText
+            android:layout_width="152dp"
+            android:layout_height="wrap_content"
+            android:inputType="number"
+            android:hint="USD" />
+
+        <Button
+            android:id="@+id/usd_to_inr"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="INR"/>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:padding="8dp"
+        android:gravity="center"
+        android:layout_below="@id/mid_layout">
+
+        <EditText
+            android:layout_width="152dp"
+            android:layout_height="wrap_content"
+            android:inputType="number"
+            android:hint="INR" />
+
+        <Button
+            android:id="@+id/inr_to_usd"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="USD"/>
+    </LinearLayout>
+
+</RelativeLayout>
