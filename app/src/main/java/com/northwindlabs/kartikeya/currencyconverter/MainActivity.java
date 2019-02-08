@@ -45,9 +45,9 @@ public class MainActivity extends AppCompatActivity {
             new RateLoader().execute(RATE_REQUEST_URL);
         }
         else {
-            midLayout.setVisibility(View.GONE);
-            midNextLayout.setVisibility(View.GONE);
-            progressBar.setVisibility(View.GONE);
+            midLayout.setVisibility(View.INVISIBLE);
+            midNextLayout.setVisibility(View.INVISIBLE);
+            progressBar.setVisibility(View.INVISIBLE);
             connectionErrorTextView.setVisibility(View.VISIBLE);
         }
     }
@@ -66,6 +66,7 @@ public class MainActivity extends AppCompatActivity {
         midNextLayout = findViewById(R.id.mid_next_layout);
 
         progressBar = findViewById(R.id.progress_bar);
+        connectionErrorTextView = findViewById(R.id.connection_error_view);
     }
 
     private class RateLoader extends AsyncTask<String, Void, Currency> {
