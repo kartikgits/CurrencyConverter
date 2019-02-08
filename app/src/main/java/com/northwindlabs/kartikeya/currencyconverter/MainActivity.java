@@ -45,9 +45,9 @@ public class MainActivity extends AppCompatActivity {
             new RateLoader().execute(RATE_REQUEST_URL);
         }
         else {
-            midLayout.setVisibility(View.INVISIBLE);
-            midNextLayout.setVisibility(View.INVISIBLE);
-            progressBar.setVisibility(View.INVISIBLE);
+            midLayout.setVisibility(View.GONE);
+            midNextLayout.setVisibility(View.GONE);
+            progressBar.setVisibility(View.GONE);
             connectionErrorTextView.setVisibility(View.VISIBLE);
         }
     }
