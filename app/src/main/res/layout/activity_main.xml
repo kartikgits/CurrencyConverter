@@ -24,10 +24,12 @@
             android:id="@+id/usd_to_inr"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="INR"/>
+            android:text="INR"
+            android:enabled="false"/>
     </LinearLayout>
 
     <LinearLayout
+        android:id="@+id/mid_next_layout"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="horizontal"
@@ -45,7 +47,51 @@
             android:id="@+id/inr_to_usd"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="USD"/>
+            android:text="USD"
+            android:enabled="false"/>
     </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/show_rate_view"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="8dp"
+        android:layout_centerInParent="true"
+        android:orientation="vertical"
+        android:visibility="gone">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/show_rate_textview"
+            android:text="Rs. 3000"
+            android:gravity="center"
+            android:textSize="24sp"/>
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:layout_gravity="center"
+            android:text="Back"/>
+
+    </LinearLayout>
+
+    <ProgressBar
+        android:id="@+id/progress_bar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:visibility="invisible" />
+
+    <TextView
+        android:id="@+id/connection_error_view"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/connection_error"
+        android:layout_centerInParent="true"
+        android:gravity="center"
+        android:visibility="gone"
+        android:textStyle="bold"/>
 
 </RelativeLayout>

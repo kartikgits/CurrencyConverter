@@ -1,3 +1,4 @@
 <resources>
     <string name="app_name">Currency Converter</string>
+    <string name="connection_error">Could not load latest currency rates.\nPlease check your connection</string>
 </resources>
